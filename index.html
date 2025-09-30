@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Historical Marvels</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            display: flex;
+        }
+
+        header {
+            background: #ff8c00;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff8c00;
+            margin-bottom: 20px;
+        }
+/* 
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #ff8c00;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            position: relative;
+            background: #fff;
+            border-radius: 8px;
+            width: 45%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #ff8c00;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            top: 20px;
+            left: -6px;
+            z-index: 1;
+        } */
+
+        .sidebar {
+            width: 250px;
+            background: #333;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar h3 {
+            color: #ff8c00;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: #ff8c00;
+        }
+
+        .content {
+            margin-left: 0;
+            width: 100%;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        .content.shift {
+            margin-left: 250px;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 2000;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .sidebar.open {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle">☰ Menu</button>
+
+    <div class="sidebar">
+        <h3>Main Topics</h3>
+        <a href="#ancient">Ancient Era</a>
+        <a href="#golden">Golden Age</a>
+        <a href="#medieval">Medieval Era</a>
+        <a href="#colonial">Colonial Rule</a>
+        <a href="#cultural">Cultural Legacy</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Indian Historical Marvels</h1>
+            <p>Discover the rich history that shaped a nation</p>
+        </header>
+
+        <section id="ancient">
+            <h2>Ancient Indian Civilizations</h2>
+            <p>The Indus Valley Civilization, Vedic Period, and their profound contributions to urban planning, languages, and cultural practices.</p>
+        </section>
+
+        <section id="golden">
+            <h2>The Golden Age</h2>
+            <p>The Gupta Empire's advancements in science, art, and literature during India’s "Golden Age."</p>
+        </section>
+
+        <section id="medieval">
+            <h2>Medieval India</h2>
+            <p>Flourishing empires like the Delhi Sultanate and Vijayanagara Empire, showcasing grand architectural achievements.</p>
+        </section>
+
+        <section id="colonial">
+            <h2>Colonial Rule and Independence</h2>
+            <p>The impact of British rule and the Indian independence movement led by figures like Gandhi, Bose, and others.</p>
+        </section>
+
+        <section id="cultural">
+            <h2>Cultural Legacy</h2>
+            <p>The enduring contributions of ancient Indian art, architecture, science, and spirituality to global culture.</p>
+        </section>
+
+        <footer style="text-align:center; padding:20px; background:#333; color:#fff;">
+            <p>&copy; 2025 Indian Historical Marvels. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Toggle sidebar
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        const content = document.querySelector('.content');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            content.classList.toggle('shift');
+        });
+
+        // Dynamic timeline loading (future implementation idea)
+        window.addEventListener('load', () => {
+            console.log("Page loaded! Implement dynamic features here.");
+        });
+    </script>
+</body>
+</html>
